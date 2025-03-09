@@ -24,28 +24,13 @@ export const Header: React.FC = () => {
               sx={{ 
                 mr: 2, 
                 display: "flex", 
-                alignItems: "center",
-                transition: "transform 0.3s ease, filter 0.3s ease",
-                "&:hover": {
-                  transform: "scale(1.1)",
-                  filter: "drop-shadow(0 0 10px rgba(10, 106, 202, 0.5))"
-                }
+                alignItems: "center"
               }}
             >
               <img 
                 src={logo} 
                 height={55} 
                 alt="Radis logo" 
-                style={{
-                  transition: "filter 0.3s ease",
-                  filter: "brightness(0.8)", // Initial dimmed effect
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.filter = "brightness(1.2)"; // Brighten on hover
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.filter = "brightness(0.8)"; // Return to dimmed
-                }}
               />
             </Box>
             <Typography
@@ -53,7 +38,7 @@ export const Header: React.FC = () => {
               className={classes.title}
               sx={{ 
                 fontWeight: 800,
-                background: "linear-gradient(45deg, #0A6ACA 30%, #3f51b5 90%)",
+                background: "black",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent"
               }}
